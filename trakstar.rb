@@ -1,8 +1,17 @@
 class Trakstar
   def word_for value
-    return 'Trakstar' if value % 3 == 0 && value % 5 == 0
-    return 'Trak' if value % 3 == 0
-    return 'Star' if value % 5 == 0
-    ''
+    three = value % 3 == 0
+    five = value % 5 == 0
+
+    case
+    when three && five
+      'Trakstar'
+    when three
+      'Trak'
+    when five
+      'Star'
+    else
+      ''
+    end
   end
 end
