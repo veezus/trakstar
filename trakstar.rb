@@ -1,4 +1,10 @@
 class Trakstar
+  def run_til number
+    1.upto(number) do |value|
+      puts "#{value} - #{word_for value}"
+    end
+  end
+
   def word_for value
     three = value % 3 == 0
     five = value % 5 == 0
